@@ -1,0 +1,17 @@
+.order{
+    padding: 40px;
+    margin: 20px 0;
+    border: 1px solid lightgrey;
+    background-color: white;
+}
+
+.order__total{
+    font-weight: 500;
+    text-align: right;
+}
+
+.order__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

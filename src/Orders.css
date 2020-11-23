@@ -1,0 +1,18 @@
+.orders{
+    padding: 20px 80px;
+}
+
+.orders h1{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.orders__total{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.orders__progress{
+    text-align: center;
+    margin-top: 30vh;
+}

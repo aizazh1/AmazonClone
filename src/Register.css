@@ -1,0 +1,64 @@
+.register__logo {
+  object-fit: contain;
+  width: 100px;
+  margin: 20px auto;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.register__container {
+  width: 300px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding: 20px;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.register__container h1 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.register__container form h5 {
+  margin-bottom: 5px;
+}
+
+.register__input {
+  margin-bottom: 10px !important;
+  width: 98%;
+}
+
+.register__input input {
+  background-color: white;
+  border: 2px solid !important;
+  border-color: black gray gray black !important;
+  padding-left: 5px;
+}
+
+.register__input label{
+  margin-left: 5px;
+  margin-top: 3px;
+  color: gray !important;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.register__info {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.register__container form button {
+  margin-top: 10px;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+}
