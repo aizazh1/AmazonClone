@@ -1,7 +1,7 @@
 import React from "react";
-import CustomButton from "./CustomButton";
+import {CustomButton} from "../index";
 import "./Product.css";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../../StateProvider/StateProvider";
 import StarIcon from "@material-ui/icons/Star";
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 

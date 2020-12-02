@@ -1,10 +1,10 @@
 import React from "react";
 import "./Subtotal.css";
 import CurrencyFormat from "react-currency-format";
-import { useStateValue } from "./StateProvider";
-import { getBasketTotal } from "./reducer";
+import { useStateValue } from "../../StateProvider/StateProvider";
+import { getBasketTotal } from "../../StateProvider/reducer";
 import { useHistory } from "react-router-dom";
-import CustomButton from "./CustomButton";
+import {CustomButton} from "../index";
 
 const Subtotal = () => {
   const [{ basket, user }] = useStateValue();

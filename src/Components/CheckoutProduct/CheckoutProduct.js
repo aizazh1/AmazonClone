@@ -1,9 +1,9 @@
 import React, { forwardRef } from "react";
 import "./CheckoutProduct.css";
-import CustomButton from "./CustomButton";
-import { useStateValue } from "./StateProvider";
+import { CustomButton } from "../index";
+import { useStateValue } from "../../StateProvider/StateProvider";
 import StarIcon from "@material-ui/icons/Star";
-import StarBorderIcon from '@material-ui/icons/StarBorder';
+import StarBorderIcon from "@material-ui/icons/StarBorder";
 
 const CheckoutProduct = (props, ref) => {
   const { id, image, title, price, rating, hideButton } = props;
@@ -25,7 +25,7 @@ const CheckoutProduct = (props, ref) => {
           <strong>{price}</strong>
         </p>
         <div className="checkoutProduct__rating">
-        {Array(rating)
+          {Array(rating)
             .fill()
             .map((_, i) => (
               <span role="img" aria-label="rating_emoji" key={i}>
@@ -37,7 +37,7 @@ const CheckoutProduct = (props, ref) => {
               .fill()
               .map((_, i) => (
                 <span role="img" aria-label="rating_emoji" key={i}>
-                  <StarBorderIcon style={{ fill: "#E1E15C" }}/>
+                  <StarBorderIcon style={{ fill: "#E1E15C" }} />
                 </span>
               ))}
         </div>

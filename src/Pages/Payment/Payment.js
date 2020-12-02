@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./Payment.css";
-import { useStateValue } from "./StateProvider";
-import CheckoutProduct from "./CheckoutProduct";
+import { useStateValue } from "../../StateProvider/StateProvider";
+import { getBasketTotal } from "../../StateProvider/reducer";
+import { CheckoutProduct, CustomButton } from "../../Components/index";
 import FlipMove from "react-flip-move";
 import { Link, useHistory } from "react-router-dom";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
-import { getBasketTotal } from "./reducer";
-import axios from "./axios";
-import { db } from "./firebase";
-import CustomButton from "./CustomButton";
+import axios from "../../axios/axios";
+import { db } from "../../firebase/firebase";
 
 const Payment = () => {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -43,19 +42,21 @@ const Payment = () => {
     };
 
     getClientSecret();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [basket]);
 
   useEffect(() => {
     if (!user) {
       history.replace("/");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setProcessing(true);
 
-    const payload = await stripe
+    await stripe
       .confirmCardPayment(clientSecret, {
         payment_method: {
           card: elements.getElement(CardElement),

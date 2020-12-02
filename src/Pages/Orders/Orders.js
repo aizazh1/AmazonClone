@@ -1,10 +1,10 @@
 import { CircularProgress } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import CurrencyFormat from "react-currency-format";
-import { db } from "./firebase";
-import Order from "./Order";
+import { db } from "../../firebase/firebase";
+import Order from "./Order/Order";
 import "./Orders.css";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../../StateProvider/StateProvider";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);

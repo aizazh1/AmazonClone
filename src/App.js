@@ -1,17 +1,12 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import Header from "./Header";
-import Home from "./Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Checkout from "./Checkout";
-import Login from "./Login";
-import { auth } from "./firebase";
-import { useStateValue } from "./StateProvider";
-import Payment from "./Payment";
+import {Header} from "./Components/index";
+import {Home, Checkout, Login, Payment, Orders, Register} from './Pages/index';
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
-import Orders from "./Orders";
-import Register from "./Register";
+import { auth } from "./firebase/firebase";
+import { useStateValue } from "./StateProvider/StateProvider";
 
 const promise = loadStripe(
   "pk_test_51HPvYTDbBitagA1QF9HfL1134JVSioXHsuO2JnBtUqKlm91WQLxxNxiKPOBx4JDWcO6dhd67wKDbfLKniLged39O00EXs6GSqx"
@@ -36,6 +31,7 @@ function App() {
         });
       }
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <Router>

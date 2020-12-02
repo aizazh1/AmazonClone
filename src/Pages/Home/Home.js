@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import "./Home.css";
-import Product from "./Product";
-import Toast from "./Toast";
+import {Product, Toast} from "../../Components/index";
 import Carousel from "react-material-ui-carousel";
-import bg1 from "./images/bg1.jpg";
-import bg2 from "./images/bg2.jpg";
-import bg3 from "./images/bg3.jpg";
-import bg4 from "./images/bg4.jpg";
-import bg5 from "./images/bg5.jpg";
+import bg1 from "../../images/bg1.jpg";
+import bg2 from "../../images/bg2.jpg";
+import bg3 from "../../images/bg3.jpg";
+import bg4 from "../../images/bg4.jpg";
+import bg5 from "../../images/bg5.jpg";
 
 const products = [
   [

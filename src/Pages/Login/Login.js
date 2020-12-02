@@ -1,8 +1,8 @@
 import React from "react";
 import "./Login.css";
 import { Link, useHistory } from "react-router-dom";
-import { auth } from "./firebase";
-import CustomButton from "./CustomButton";
+import { auth } from "../../firebase/firebase";
+import {CustomButton} from "../../Components/index";
 import { Formik, Form, Field } from "formik";
 import { TextField } from "formik-material-ui";
 import {  LinearProgress } from "@material-ui/core";

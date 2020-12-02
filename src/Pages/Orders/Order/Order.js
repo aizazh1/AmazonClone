@@ -1,7 +1,7 @@
 import React from "react";
 import "./Order.css";
 import moment from "moment";
-import CheckoutProduct from "./CheckoutProduct";
+import {CheckoutProduct} from "../../../Components/index";
 import CurrencyFormat from "react-currency-format";
 
 const Order = ({ order }) => {
