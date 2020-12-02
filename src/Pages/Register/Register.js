@@ -2,7 +2,7 @@ import React from "react";
 import "./Register.css";
 import { Link, useHistory } from "react-router-dom";
 import { auth } from "../../firebase/firebase";
-import {CustomButton} from "../../Components/index";
+import { CustomButton } from "../../Components/index";
 import { Formik, Form, Field } from "formik";
 import { TextField } from "formik-material-ui";
 import { LinearProgress } from "@material-ui/core";
@@ -10,7 +10,7 @@ import { LinearProgress } from "@material-ui/core";
 const Register = () => {
   const history = useHistory();
 
-  const register = (data, e) => {
+  const register = (data) => {
     auth
       .createUserWithEmailAndPassword(data.email, data.password)
       .then((auth) => {
@@ -18,7 +18,6 @@ const Register = () => {
           .updateProfile({ displayName: data.name })
           .catch((error) => alert(error));
         //success
-        console.log(auth);
         if (auth) {
           history.push("/");
         }
@@ -65,10 +64,8 @@ const Register = () => {
             return errors;
           }}
           onSubmit={(values, { setSubmitting }) => {
-            // setTimeout(() => {
-              setSubmitting(true);
-              register(values);
-            // }, 500);
+            setSubmitting(true);
+            register(values);
           }}
           render={({ submitForm, isSubmitting }) => (
             <Form>
@@ -97,7 +94,7 @@ const Register = () => {
               <CustomButton disabled={isSubmitting} onClick={submitForm}>
                 <span>Register</span>
               </CustomButton>
-              {isSubmitting && <LinearProgress/>}
+              {isSubmitting && <LinearProgress />}
             </Form>
           )}
         />

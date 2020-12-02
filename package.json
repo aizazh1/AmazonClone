@@ -21,7 +21,8 @@
     "react-flip-move": "^3.0.4",
     "react-material-ui-carousel": "^2.0.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "yup": "^0.31.1"
   },
   "scripts": {
     "start": "react-scripts start",
